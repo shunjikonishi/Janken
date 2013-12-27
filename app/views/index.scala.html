@@ -1,0 +1,12 @@
+@(message: String)
+
+@main("Welcome to Play") {
+@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css")) <br>
+@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js")) <br>
+@WebJarAssets.locate("jquery.min.js") <br>
+@org.webjars.WebJarAssetLocator.WEBJARS_PATH_PREFIX <br>
+@play.api.Play.resource("/META-INF/resources/webjars/bootstrap/3.0.3/css/bootstrap.min.css")(play.api.Play.current)<br>
+@message<br>
+@play.api.cache.Cache
+
+}
