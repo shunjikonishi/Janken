@@ -23,7 +23,7 @@ object Application extends Controller {
   */
   
   def index = Action {
-    val value = RedisService.get("aaa").getOrElse("Not found")
+    val value = RedisService.getString("aaa").getOrElse("Not found")
     Ok(views.html.index(value))
   }
   
