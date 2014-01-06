@@ -4,6 +4,12 @@
 
 # Home page
 GET     /                           controllers.Application.index
+GET     /janken/open/:name          controllers.Application.open(name)
+GET     /janken/room/:name          controllers.Application.room(name)
+
+GET     /set/:key/:value            controllers.Application.set(key, value)
+GET     /incr/:key                  controllers.Application.incr(key)
+GET     /decr/:key                  controllers.Application.decr(key)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
